@@ -1,0 +1,60 @@
+
+<html>
+	<head>
+		<title>Javascript</title>
+		<meta charset="UTF-8" />
+		
+		<style>
+		#body {
+				background-color: #eee;
+			}
+			#header {
+				background-color: #ddd;
+				text-align: center;
+			}
+			#gameDiv {
+				background-color: #ddd;
+				margin: auto;
+				text-align: center;
+				max-width: 800px;
+				padding: 18px 24px;
+			}
+			#description {
+				background-color: #ddd;
+				margin: auto;
+				text-align: center;
+				max-width: 600px;
+			}
+			.center {
+				text-align: center;
+			}
+			#gameScreen {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="body">
+			<div id="header">
+				<h1>Thomson Problem</h1>
+			</div>
+			<div id="main">
+				<div id="gameDiv">
+					<canvas id="gameScreen" width="720" height="720"></canvas>
+					<script type="module" src="src/main.js"></script>
+					<br>
+					<button id="startBtn">Start</button>
+					<button id="pauseBtn">Pause</button>
+					<button id="resetBtn">Reset</button>
+					<input type="number" id="vertexNo" value="15"></input>
+					<button id="toggleSideBtn">Inside/Outside view</button>
+				</div>
+				<div id="description">
+					<h1>Description</h1>
+					This applet is a naive attempt at iteratively solving the Thomspon problem for different number of vertices.
+				</div>
+			</div>
+			<div id="footer"></div>
+		</div>
+	</body>
+</html>
