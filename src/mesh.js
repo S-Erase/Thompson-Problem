@@ -12,9 +12,14 @@ export class vec3{
         this.y+=vec.y;
         this.z+=vec.z;
     }
+    sub(vec){
+        this.x-=vec.x;
+        this.y-=vec.y;
+        this.z-=vec.z;
+    }
     divide(scal){
         if(scal == 0){
-            console.log("Divide by zero!");
+            //console.log("Divide by zero!");
             return;
         }
         this.x/=scal;
@@ -26,6 +31,10 @@ export class vec3{
 export function normalize(vec){
     const len = vec.length();
     return new vec3(vec.x / len, vec.y / len, vec.z / len);
+}
+
+export function dot(vec0,vec1){
+    return vec0.x*vec1.x + vec0.y*vec1.y + vec0.z*vec1.z;
 }
 
 function normalizedmidpoint(vec0, vec1){
